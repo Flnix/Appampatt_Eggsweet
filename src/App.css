@@ -1,0 +1,15 @@
+/* index.css or App.css */
+@font-face {
+    font-family: "InterTight";
+    src: url("./Components/Stylings/InterTight-Medium.ttf") format("truetype");
+  }
+  
+  body, .Poppins {
+    font-family: "InterTight", sans-serif;
+  }
+  
+ 
+  h1, h2, h3, h4, h5, h6, p, a, button, input, .btn {
+    font-family: "InterTight", sans-serif;
+  }
+  

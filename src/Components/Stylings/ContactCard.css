@@ -1,0 +1,32 @@
+.contact-card {
+   /* Yellow background */
+  color: rgb(255, 255, 255); /* Text color */
+  padding: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+  max-width: 100%; /* Maximum width */
+  margin: 20px auto; /* Center alignment */
+  font-family: Arial, sans-serif; /* Font style */
+}
+
+.contact-item {
+  font-size: small;
+  display: flex; /* Display items in a row */
+  align-items: center; /* Vertically center items */
+  margin-bottom: 10px; /* Space between items */
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.contact-icon {
+  width: 15px; /* Fixed width for icon */
+  height: 19px; /* Fixed height for icon */
+  margin-right: 10px; /* Space between icon and text */
+  vertical-align: middle; /* Vertically center the icon */}
+
+/* Ensure text aligns perfectly with the icon */
+.contact-item p {
+  margin: 0; /* Remove default margins */
+  line-height: 1.2; /* Adjust line height */
+  display: flex;
+  align-items: center; /* Align items vertically */
+}

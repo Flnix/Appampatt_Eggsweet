@@ -1,0 +1,59 @@
+body {
+    background: rgb(255,255,255);
+    /* background: linear-gradient(0deg, rgba(255,255,255,1) 0%, #ffbf00 100%); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact-card {
+    position: relative;
+    margin-top: auto; 
+    
+  
+
+  }
+
+  @font-face {
+    font-family: Poppins;
+    src: url('./Poppins-Medium.ttf');
+  }
+  .Poppins{
+    font-family: Poppins;
+  }
+.abouttitle{
+    
+        /* Text color and shadow */
+        color: white; /* Set the text color to white */
+        border-radius: 7px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+  .abouttext{
+    text-align: justify;
+  text-justify: inter-word;
+  margin-bottom: 50px;
+  
+  }
+  @font-face {
+    font-family: RobotoSlab;
+    src: url(./RobotoSlab-Medium.ttf);
+  }
+
+  .Robo{
+font-family: RObotoSlab
+  }
+
+  h1{
+    font-size: 40px;
+  }
+
+
+  @font-face {
+    font-family: DancingScript;
+    src: url("./DancingScript-Regular.ttf");
+  }
+
+  .DancingScript{
+    font-family: DancingScript;
+    margin-bottom: 20px;
+  }
+

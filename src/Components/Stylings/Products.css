@@ -1,0 +1,80 @@
+/* src/components/Products.css */
+
+/* Styles for the bottom fixed overlay */
+/* Ensure the content area for the tabs has a minimum height */
+/* Ensure the content area for the tabs has a flexible min-height */
+.tab-content-wrapper {
+  padding-bottom: 50px; /* Prevent the ContactCard from overlapping */
+  position: relative; /* So that the bottom overlay behaves correctly */
+}
+
+
+/* Adjust the bottom overlay to fit within the min-height container */
+.bottom-overlay {
+  position: absolute; /* Change from fixed to absolute */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+  
+  /* Style for total price text */
+  .total-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  /* Optional styling for the Show Cart button */
+  .show-cart-button {
+    margin-left: 10px;
+    border-radius: 0; /* Add space if needed */
+  }
+  
+
+/* Define styles for custom-tabs with higher specificity */
+/* Define styles for custom-tabs */
+.custom-tabs .nav-link {
+  color: rgb(0, 0, 0) !important; /* Default color for inactive tabs */
+  background-color: transparent; /* No background for inactive tabs */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; /* Smooth transition */
+}
+
+/* Style for the active tab */
+.custom-tabs .nav-link.active {
+  color: #000000 !important; /* Text color for active tab */
+  background-color: #ffbf00 !important; /* Background color for active tab */
+  /* Optional: Make the active tab text bolder */
+}
+
+/* Optional: Modify hover effects */
+.custom-tabs .nav-link:hover {
+  color: #000000 !important; /* Text color on hover */
+  background-color: rgba(255, 213, 0, 0.618); /* Lighter yellow background on hover */
+}
+
+/* Handle focus or other active states */
+.custom-tabs .nav-link:focus,
+.custom-tabs .nav-link:active {
+  color: #000000 !important; /* Ensure active/focused color */
+  background-color: rgb(255, 213, 0) !important; /* Background for active or focused tab */
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(./Poppins-Medium.ttf);
+}
+Poppins{
+  font-family: Poppins;
+}
+
+.carticon{
+  margin-right: 4px;
+  vertical-align: -0.9px;
+}

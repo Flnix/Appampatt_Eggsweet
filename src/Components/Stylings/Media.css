@@ -1,0 +1,18 @@
+.social-media-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .social-logo {
+    margin-top: 20px;
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .social-logo:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    opacity: 0.8; /* Slight transparency on hover */
+  }
+  

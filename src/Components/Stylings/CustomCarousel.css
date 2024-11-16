@@ -1,0 +1,57 @@
+/* CustomCarousel.css */
+
+/* Container for centering and setting consistent width */
+.carousel-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the carousel horizontally */
+    align-items: center; /* Center carousel contents vertically */
+    margin-bottom: 20px; /* Space below the carousel */
+  }
+  
+  /* Wrapper for the carousel without a fixed height */
+  .carousel-wrapper {
+    width: 100%; /* Full width of the container */
+    max-width: 1000px; /* Set a max-width to align with the product container */
+    overflow: hidden; /* Hide any overflow */
+    position: relative;
+  }
+  
+  /* Custom carousel styling */
+  .custom-carousel {
+    width: 100%; /* Full width */
+    height: 100%; /* Match the wrapper's height */
+  }
+  
+  /* Image styling */
+  .carousel-image {
+    width: 100%; /* Image should fill the width of the carousel */
+    height: 100%; /* Image should fill the height of the carousel */
+    object-fit: cover; /* Cropped image effect */
+    object-position: center center; /* Crop from the center */
+  }
+  
+  .carousel-caption {
+
+    color: white; /* White text for contrast */
+    padding: 10px; /* Padding for better readability */
+    position: absolute; /* Positioning */
+    bottom: 20px; /* Position it at the bottom */
+    left: 15px; /* Margin on the left */
+    right: 15px; /* Margin on the right */
+    z-index: 1; /* Make sure it is above the images */
+    line-height: 1.2; /* Adjust line-height to reduce spacing */
+    text-overflow: ellipsis; /* Truncate text with ellipsis */
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Hide overflow */
+  }
+
+  @font-face {
+    font-family: DancingScript;
+    src: url("./DancingScript-Regular.ttf");
+  }
+
+  .DancingScript{
+    font-family: DancingScript;
+    margin-bottom: 20px;
+  }
