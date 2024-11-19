@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
 import qrcode from "../Images/QRCode.png";
 import "./Stylings/PaymentOverlay.css"
+import nodemailer from "nodemailer";
 
 export default function PaymentOverlay({ onClose, OrderDetails, totalPrice, cartItems }) {
   const [upiId] = useState("6369715501-b7bb@axl");
@@ -48,6 +49,45 @@ export default function PaymentOverlay({ onClose, OrderDetails, totalPrice, cart
     }
   };
 
+  // Shoot Mail via smtp
+  const sendEmail = async (emailDetails) => {
+  // Create a transporter using Zoho Mail's SMTP configuration
+  const transporter = nodemailer.createTransport({
+    host: "smtp.zoho.com", // Zoho SMTP server
+    port: 465, // SMTP port for Zoho
+    secure: true, // Use SSL/TLS
+    auth: {
+      user: "admin@appampattsweets.in", // Replace with your Zoho email
+      pass: "qXjVh2va639F", // Replace with your Zoho app-specific password
+    },
+  });
+
+  // Define the mail options
+  const mailOptions = {
+    from: "your-email@zoho.com", // Sender's email address
+    to: emailDetails.userEmail, // Recipient's email address (user's email)
+    subject: "Payment Verification - Order Details",
+    html: `
+      <h3>Thank you for your payment!</h3>
+      <p>Dear Customer,</p>
+      <p>Your payment for the order has been received. Below are your order details:</p>
+      <ul>
+        <li><strong>Order Token:</strong> ${emailDetails.Token}</li>
+        <li><strong>Total Amount Paid:</strong> ₹${emailDetails.AmountPaid}</li>
+        <li><strong>Ordered Items:</strong></li>
+        <ul>
+          ${emailDetails.OrderedItems.map(
+            (item) =>
+              `<li>${item.ProductName} (Quantity: ${item.Quantity})</li>`
+          ).join("")}
+        </ul>
+      </ul>
+      <p>We will notify you once your order is processed.</p>
+      <p>Thank you for shopping with us!</p>
+    `,
+  };
+
+
   // Handle payment submission
   const handlePaymentDone = async () => {
     setPaymentDone(true); // Mark payment as done to disable button
@@ -78,6 +118,8 @@ export default function PaymentOverlay({ onClose, OrderDetails, totalPrice, cart
           mode: "no-cors", // Allow the fetch to follow redirects
         }
       );
+      //calling mil function
+      await sendEmail(payload);
       // You can handle the response here if needed
     } catch (error) {
       console.error("Fetch Error:", error);
