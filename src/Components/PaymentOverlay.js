@@ -68,7 +68,7 @@ export default function PaymentOverlay({ onClose, OrderDetails, totalPrice, cart
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbw3BZ4GRiddACi5awwo652VWZ3FqcuNLTfmj4K-ACnf4s9RXXQaBnXFtqWJ7I2JrRlfWQ/exec",
+        "https://script.google.com/macros/s/AKfycbzBe802eAdFppHT1k6X7_do4pg-Eu-eaH8eS60bXIQsSvGhweFEYDB2ZcU2qiOW8qUOBw/exec",
         {
           method: "POST",
           headers: {
