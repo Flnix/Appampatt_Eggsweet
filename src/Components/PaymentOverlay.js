@@ -47,7 +47,8 @@ export default function PaymentOverlay({ onClose, OrderDetails, totalPrice, cart
       console.log(`${text} copied to clipboard!`);
     }
   };
-  
+
+
   // Handle payment submission
   const handlePaymentDone = async () => {
     setPaymentDone(true); // Mark payment as done to disable button
@@ -78,7 +79,6 @@ export default function PaymentOverlay({ onClose, OrderDetails, totalPrice, cart
           mode: "no-cors", // Allow the fetch to follow redirects
         }
       );
-      
       // You can handle the response here if needed
     } catch (error) {
       console.error("Fetch Error:", error);
